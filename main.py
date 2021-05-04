@@ -27,7 +27,7 @@ while True:
         print("\nYou're", user, "if I'm not mistaken. \n")
     elif usercmd == "Exit":
         print("\nBye", user,"!")
-        break
+        quit()
     #Quick Menu
     elif usercmd == "Show the Quick Menu":
         print("\nQuick Menu\n")
@@ -36,7 +36,7 @@ while True:
           print("Returned")
     #About
     elif usercmd == "Who created you?":
-        print("\nI was originaly built by pivinx1, but this fork is made by my master setapdede.")
+        print("\nI was originaly built by pivinx1, with contributions from setapdede.")
     elif usercmd == "What is your version?":
         print("\nI see i've got a tech expert here :). I do not have a specific release version but you could say this is 'my first release'.")
     #Settings
