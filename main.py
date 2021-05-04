@@ -1,6 +1,7 @@
 # supposedly start here
 import random
 import datetime
+from math import sqrt
 greetingID = random.randint(0, 4)
 usercmd = input("\nPlease input how do you want to be called\n")
 user = usercmd
@@ -34,6 +35,7 @@ while True:
         print("\nQuick Menu\n")
         print("DOS")
         print("Progressbar95")
+        print("Calculator")
         usercmd = input("Return to Sparrow\n")
         if usercmd == "Return to Sparrow":
           print("Returned")
@@ -104,6 +106,33 @@ while True:
               progressbar = 0
               if progressbar == 100:
                 break
+        elif usercmd == "Calculator":
+          #Define all needed numbers then choose the operation
+          base = int(input("Type in the first number:\n"))
+          additive = int(input("\nType in the second number:\n"))
+          operation = input("\nType in the operation (add, substract, multiply, divide, power, square")
+          #Do the math based on type of operation
+          if operation == "add":
+            equality = base + additive
+            print(equality)
+          elif operation == "substract":
+            equality = base - additive
+            print(equality)
+          elif operation == "multiply":
+            equality = base * additive
+            print(equality)
+          elif operation == "divide":
+            equality = base / additive
+            print(equality)
+          elif operation == "power":
+            equality = base ^ additive
+            print(equality)
+          elif operation == "square":
+            #Square root to-do: first ask for operation, omit additive if is square root
+            equality = sqrt(base)
+            print(equality)
+          else:
+            print("Invalid operation")
     #About
     elif usercmd == "Who created you?":
         print("\nI was originaly built by pivinx1, but this fork is made by my master setapdede.")
