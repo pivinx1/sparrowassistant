@@ -4,4 +4,4 @@ You can come here to contribute to a small project, an CLI-based assistant - Spa
 # Sparrow in numbers:
 - 1 command except exit
 - 4 greetings
-
+- Over 12 clones
