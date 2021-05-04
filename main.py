@@ -39,7 +39,7 @@ while True:
           print("Returned")
         if usercmd == "DOS":
           exit = 0
-          print("\nDOS for Sparrow Assistant SD\n")
+          print("\nDOS for Sparrow Assistant\n")
           while exit == 0:
            DOS = input(">")
            if DOS == "exit":
