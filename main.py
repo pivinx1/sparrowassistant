@@ -148,6 +148,9 @@ while True:
         print("\nI was originaly built by pivinx1, with contributions from setapdede.")
     elif usercmd == "What is your version?":
         print("\nI see i've got a tech expert here :). I do not have a specific release version but you could say this is 'my first release'.")
+    elif usercmd == "Who are you?":
+      print("I am an narrow reactive AI codenamed Sparrow, developed by pivinx1, with contributions from setapdede.")
+      print("You can call me Sofia though.")
     #Settings
     elif usercmd == "Change my name":
         while usercmd == "Change my name":
