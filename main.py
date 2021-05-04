@@ -46,7 +46,7 @@ while True:
             exit = 1;
         if usercmd == "Progressbar95":
           progressbar = 0
-          while progressbar < 101:
+          while progressbar < 96:
            segment = random.randint(0, 1)
            progressbar2 = progressbar
            if (progressbar == 100):
@@ -102,7 +102,8 @@ while True:
                  progressbar = 100
              if (segment == 1):
               progressbar = 0
-             
+              if progressbar == 100:
+                break
     #About
     elif usercmd == "Who created you?":
         print("\nI was originaly built by pivinx1, but this fork is made by my master setapdede.")
