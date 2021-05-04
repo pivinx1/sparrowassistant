@@ -1,5 +1,5 @@
-# Sparrow Assistant SD
-Setap's fork of sparrowassistant by pivinx1
+# Sparrow Assistant
+An CLI-based assistant made by pivinx1
 # Sparrow in numbers:
 - 5 commands except exit
 - 4 greetings
