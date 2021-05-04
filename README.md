@@ -1,7 +1,7 @@
-# sparrowassistant
-Hi!
-You can come here to contribute to a small project, an CLI-based assistant - Sparrow.
+# Sparrow Assistant
+An CLI-based assistant made by pivinx1
 # Sparrow in numbers:
-- 1 command except exit
+- 5 commands except exit
 - 4 greetings
-- Over 12 clones
+- 2 funny jokes :)
+- Response for when you didn't type a command correctly
