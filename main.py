@@ -1,6 +1,5 @@
 # supposedly start here
 import random
-import getpass
 import datetime
 greetingID = random.randint(0, 4)
 usercmd = input("\nPlease input how do you want to be called\n")
@@ -23,6 +22,7 @@ while True:
     #if usercmd == "What time it is?":
         #time = datetime.datetime.now()
         #print('It\'s', time)
+    #this piece of code is unused because pivin sucks at this
     if usercmd == "Who am I?":
         print("\nYou're", user, "if I'm not mistaken. \n")
     elif usercmd == "Exit":
