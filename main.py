@@ -1,6 +1,5 @@
 # supposedly start here
 import random
-import getpass
 import datetime
 greetingID = random.randint(0, 4)
 usercmd = input("\nPlease input how do you want to be called\n")
@@ -24,11 +23,12 @@ while True:
     #if usercmd == "What time it is?":
         #time = datetime.datetime.now()
         #print('It\'s', time)
+    #this piece of code is unused because pivin sucks at this
     if usercmd == "Who am I?":
         print("\nYou're", user, "if I'm not mistaken. \n")
     elif usercmd == "Exit":
         print("\nBye", user,"!")
-        break
+        quit()
     #Quick Menu
     elif usercmd == "Show the Quick Menu":
         print("\nQuick Menu\n")
@@ -106,6 +106,16 @@ while True:
     #About
     elif usercmd == "Who created you?":
         print("\nI was originaly built by pivinx1, but this fork is made by my master setapdede.")
+        quit()
+    #Quick Menu
+    elif usercmd == "Show the Quick Menu":
+        print("\nQuick Menu\n")
+        usercmd = input("Return to Sparrow\n")
+        if usercmd == "Return to Sparrow":
+          print("Returned")
+    #About
+    elif usercmd == "Who created you?":
+        print("\nI was originaly built by pivinx1, with contributions from setapdede.")
     elif usercmd == "What is your version?":
         print("\nI see i've got a tech expert here :). I do not have a specific release version but you could say this is 'my first release'.")
     #Settings
