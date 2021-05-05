@@ -104,7 +104,7 @@ while True:
     #Invalid
     else:
         tryID = random.randint(0, 4)
-        print("\nI didn't understand what you ment. Could you try rephrasing it?\n")
+        print("\nI didn't understand what you meant. Could you try rephrasing it?\n")
         if tryID == 0:
           print("(Try 'Who am I?'')")
         if tryID == 1:
