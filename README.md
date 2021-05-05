@@ -8,9 +8,9 @@ An CLI-based assistant made by pivinx1 named Sparrow.
 ![GitHub repo size](https://img.shields.io/github/repo-size/pivinx1/sparrowassistant)
 # Sparrow in numbers:
 - 5 commands except exit
-   - 2 actions in the Quick Menu (show using the "Show the Quick Menu" command), more to come
+   - 3 actions in the Quick Menu (show using the "Show the Quick Menu" command), more to come
 - 4 greetings
-- 2 funny jokes :)
+- 3 funny jokes :)
 
 - Response for when you didn't type a command correctly
 
