@@ -3,12 +3,12 @@ import random
 import datetime
 from math import sqrt
 from progressbar import progressbar
+import calc
 greetingID = random.randint(0, 4)
 usercmd = input("\nPlease input how do you want to be called\n")
 user = usercmd
 exit = 0
 # Greet the user
-print("\nDEBUG_GREET: ", greetingID)
 if greetingID == 0:
     print("\n*nom nom nom* Hi!")
 elif greetingID == 1:
@@ -50,11 +50,10 @@ while True:
         if usercmd == "Progressbar95":
          progressbar()
         elif usercmd == "Calculator":
-          #Define all needed numbers then choose the operation
-          base = int(input("Type in the first number:\n"))
-          additive = int(input("\nType in the second number:\n"))
-          operation = input("\nType in the operation (add, substract, multiply, divide, power, square")
           #Do the math based on type of operation
+          base = int(input("\nType in the first number:\n"))
+          additive = int(input("\nType in the second number:\n"))
+          operation = input("\nType in the type of the operation (square, power, add, subtract, multiply, divide)\n")
           if operation == "add":
             equality = base + additive
             print(equality)
@@ -76,10 +75,6 @@ while True:
             print(equality)
           else:
             print("Invalid operation")
-    #About
-    elif usercmd == "Who created you?":
-        print("\nI was originaly built by pivinx1, but this fork is made by my master setapdede.")
-        quit()
     #Quick Menu
     elif usercmd == "Show the Quick Menu":
         print("\nQuick Menu\n")
@@ -101,9 +96,11 @@ while True:
          user = usercmd
     #Jokes
     elif usercmd == "Hey Cortana!":
-        print("\nHaha! It surely was funny but I'm not Cortana.")
+      print("\nHaha! It surely was funny but I'm not Cortana.")
     elif usercmd == "Ok Google":
-        print("\nSorry", user, "but I'm sure I'm not Google's assistant.")
+      print("\nSorry", user, "but I'm sure I'm not Google's assistant.")
+    elif usercmd == "Hey Siri!":
+      print("\nI'm sure you're not Siri-ous.")
     #Invalid
     else:
         tryID = random.randint(0, 4)
