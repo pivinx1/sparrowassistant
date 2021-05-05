@@ -4,6 +4,7 @@ import datetime
 from math import sqrt
 from progressbar import progressbar
 greetingID = random.randint(0, 4)
+ordinal = lambda n: "%d%s"%(n,{1:"st",2:"nd",3:"rd"}.get(n if n<20 else n%10,"th"))
 usercmd = input("\nPlease input how do you want to be called\n")
 user = usercmd
 exit = 0
@@ -22,10 +23,10 @@ else:
 # Command loop
 while True:
     usercmd = input('\nWhat do you want me to do?\n')
-    #if usercmd == "What time it is?":
-        #time = datetime.datetime.now()
-        #print('It\'s', time)
-    #this piece of code is unused because pivin sucks at this
+    if usercmd == "What time it is?":
+        time = datetime.datetime.now()
+        print('It\'s ', time.strftime("%A %B "), ordinal(int(time.strftime("%-d"))), time.strftime(", %Y"),sep="")
+    #this piece of code is written by leap of azzam since pivin sucks at this
     if usercmd == "Who am I?":
         print("\nYou're", user, "if I'm not mistaken. \n")
     elif usercmd == "Exit":
@@ -76,10 +77,6 @@ while True:
             print(equality)
           else:
             print("Invalid operation")
-    #About
-    elif usercmd == "Who created you?":
-        print("\nI was originaly built by pivinx1, but this fork is made by my master setapdede.")
-        quit()
     #Quick Menu
     elif usercmd == "Show the Quick Menu":
         print("\nQuick Menu\n")
@@ -88,11 +85,11 @@ while True:
           print("Returned")
     #About
     elif usercmd == "Who created you?":
-        print("\nI was originaly built by pivinx1, with contributions from setapdede.")
+        print("\nI was originaly built by pivinx1, with contributions from setapdede and Leap of Azzam.")
     elif usercmd == "What is your version?":
         print("\nI see i've got a tech expert here :). I do not have a specific release version but you could say this is 'my first release'.")
     elif usercmd == "Who are you?":
-      print("I am an narrow reactive AI codenamed Sparrow, developed by pivinx1, with contributions from setapdede.")
+      print("I am an narrow reactive AI codenamed Sparrow, developed by pivinx1, with contributions from setapdede and Leap of Azzam.")
       print("You can call me Sofia though.")
     #Settings
     elif usercmd == "Change my name":
@@ -103,7 +100,9 @@ while True:
     elif usercmd == "Hey Cortana!":
         print("\nHaha! It surely was funny but I'm not Cortana.")
     elif usercmd == "Ok Google":
-        print("\nSorry", user, "but I'm sure I'm not Google's assistant.")
+        print("\nSorry ", user, ", but I'm sure I'm not Google's assistant.",sep="")
+    elif usercmd == "Hey Siri":
+        print("\nNo, this isn't iPhone")
     #Invalid
     else:
         tryID = random.randint(0, 4)
