@@ -100,8 +100,7 @@ while True:
     elif usercmd == "Hey Cortana!":
       print("\nHaha! It surely was funny but I'm not Cortana.")
     elif usercmd == "Ok Google":
-        print("\nSorry ", user, ", but I'm sure I'm not Google's assistant.",sep="")
-      print("\nSorry", user, "but I'm sure I'm not Google's assistant.")
+      print("\nSorry ", user, ", but I'm sure I'm not Google's assistant.",sep="")
     elif usercmd == "Hey Siri!":
       print("\nI'm sure you're not Siri-ous.")
     #Invalid
