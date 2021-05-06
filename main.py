@@ -25,9 +25,10 @@ while True:
     usercmd = input('\nWhat do you want me to do?\n')
     if usercmd == "What time it is?":
         time = datetime.datetime.now()
-        print('It\'s ', time.strftime("%A %B "), ordinal(int(time.strftime("%-d"))), time.strftime(", %Y"))
+        print("It\'s ", time.strftime("%A %B "), ordinal(int(time.strftime("%-d"))), time.strftime(", %Y"), sep=" ")
     #this piece of code is written by leap of azzam since pivin sucks at this
     #yeah pretty much, thanks
+    #code in lines 27 and 28 seems to be broken boi
     if usercmd == "Who am I?":
         print("\nYou're", user, "if I'm not mistaken. \n")
     elif usercmd == "Exit":
