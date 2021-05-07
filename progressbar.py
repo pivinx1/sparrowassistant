@@ -16,3 +16,5 @@ def progressbar():
             progressbar = 0
         else:
             continue
+        if progressbar == 100:
+            print("Perfect!")
