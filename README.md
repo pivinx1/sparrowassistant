@@ -13,5 +13,7 @@ An CLI-based assistant made by pivinx1 named Sparrow.
 - 3 funny jokes :)
 
 - Response for when you didn't type a command correctly
+# Getting started
+ Simply clone the source code OR download an release, then open your command line of choice, navigate to the folder with the source code then run ```python main.py```.
 
 
