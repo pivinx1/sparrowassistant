@@ -35,6 +35,15 @@ while True:
     elif usercmd == "Exit":
         print("\nBye", user,"!")
         quit()
+    #Useful
+    elif usercmd == "Take notes":
+      note = input("\nSure! What do you want me to note?\n")
+      open("note.txt", "w").write(note)
+    elif usercmd == "Read my notes":
+      with open("note.txt", "r") as notes:
+        for line in notes:
+          print("\nThese are your notes.\n")
+          print(line.strip())
     #Quick Menu
     elif usercmd == "Show the Quick Menu":
         print("\nQuick Menu\n")
@@ -89,7 +98,7 @@ while True:
     elif usercmd == "Who created you?":
         print("\nI was originaly built by pivinx1, with contributions from setapdede and Leap of Azzam.")
     elif usercmd == "What is your version?":
-        print("\nI see i've got a tech expert here :). I do not have a specific release version but you could say this is 'my first release'.")
+        print("\nYou're running Sparrow version 0.1.0_rc2.")
     elif usercmd == "Who are you?":
       print("I am an narrow reactive AI codenamed Sparrow, developed by pivinx1, with contributions from setapdede and Leap of Azzam.")
       print("You can call me Sofia though.")
