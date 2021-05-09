@@ -4,6 +4,7 @@ import datetime
 from math import sqrt
 from progressbar import progressbar
 import calc
+import os
 greetingID = random.randint(0, 4)
 ordinal = lambda n: "%d%s"%(n,{1:"st",2:"nd",3:"rd"}.get(n if n<20 else n%10,"th"))
 usercmd = input("\nPlease input how do you want to be called\n")
@@ -39,11 +40,26 @@ while True:
     elif usercmd == "Take notes":
       note = input("\nSure! What do you want me to note?\n")
       open("note.txt", "w").write(note)
+      print("Noted.")
     elif usercmd == "Read my notes":
       with open("note.txt", "r") as notes:
         for line in notes:
           print("\nThese are your notes.\n")
           print(line.strip())
+    elif usercmd == "Do I have any notes?":
+      if os.path.exists("note.txt"):
+        print("You have a note written down.")
+        read = input("\nWould you like me to read it, delete, or continue?(r/d/c)")
+        if read == "r":
+          with open("note.txt", "r") as note:
+            print("\nThese are your notes.\n")
+            for line in note: 
+              print(line.strip())
+        elif read == "d":
+          os.remove("note.txt")
+          print("I have fed your Bin with your notes.")
+        else:
+          continue
     #Quick Menu
     elif usercmd == "Show the Quick Menu":
         print("\nQuick Menu\n")
