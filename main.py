@@ -60,6 +60,13 @@ while True:
           print("I have fed your Bin with your notes.")
         else:
           continue
+      else:
+        print("\nYou don't have any notes.\n")
+        writedown = input("\nWould you like me to write something down for you or no?(y/n)\n")
+        if writedown == "y":
+          note = input("\nOkay. What do you want me to note?\n")
+          open("note.txt", "w").write(note)
+          print("Noted.")
     #Quick Menu
     elif usercmd == "Show the Quick Menu":
         print("\nQuick Menu\n")
