@@ -16,4 +16,6 @@ An CLI-based assistant made by pivinx1 named Sparrow.
 # Getting started
  Simply clone the source code OR download an release, then open your command line of choice, navigate to the folder with the source code then run ```python main.py```.
 
+# Creating apps
+ As an app developer, you are tasked to maintain and update your applications. As the main Sparrow developer, I simply review and merge your changes. Just create an pull request from your fork to add your app to Sparrow.
 
