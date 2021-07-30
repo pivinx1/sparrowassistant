@@ -1,5 +1,4 @@
 def choices():
-
     print("Please note that this isn't anything like the mobile game of the same name.\n Created by Lol Guy for the sparrow assistant by pivinx1\n")
     print("\nChoices a text game by Lol Guy")
     cmd = input("Press any key to continue\n")
@@ -28,4 +27,3 @@ def choices():
     print("Once you arrive home you eat dinner then cry yourself to sleep")
     print("The end")
     #pivin, if you need to fix any code you can :)
-choices()

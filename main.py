@@ -5,10 +5,12 @@ from math import sqrt
 from progressbar import progressbar
 import calc
 import os
+from Choices import choices
 greetingID = random.randint(0, 4)
 ordinal = lambda n: "%d%s"%(n,{1:"st",2:"nd",3:"rd"}.get(n if n<20 else n%10,"th"))
 usercmd = input("\nPlease input how do you want to be called\n")
 user = usercmd
+devmode = False
 exit = 0
 # Greet the user
 if greetingID == 0:
@@ -22,9 +24,12 @@ elif greetingID == 3:
 else:
     print("\nHi,", user + "!")
 # Command loop
-while True:
-    usercmd = input('\nWhat do you want me to do?\n')
-    #if usercmd == "What time it is?":
+while True: 
+    if devmode != True:
+        usercmd = input('\nWhat do you want me to do?\n') 
+    else:
+        usercmd = input('\nWhat do you want me to do?\nDevmode enabled, use command List developer actions to see what you can do\n')
+        #if usercmd == "What time it is?":
         #time = datetime.datetime.now()
         #print("It\'s ", time.strftime("%A %B "), ordinal(int(time.strftime("%-d"))), time.strftime(", %Y"), sep=" ")
     #this piece of code is written by leap of azzam since pivin sucks at this
@@ -73,6 +78,7 @@ while True:
         print("DOS")
         print("Progressbar95")
         print("Calculator")
+        print("Choices")
         usercmd = input("Return to Sparrow\n")
         if usercmd == "Return to Sparrow":
           print("Returned")
@@ -111,6 +117,8 @@ while True:
             print(equality)
           else:
             print("Invalid operation")
+        elif usercmd == "Choices":
+            choices()
     #Quick Menu
     elif usercmd == "Show the Quick Menu":
         print("\nQuick Menu\n")
@@ -121,7 +129,7 @@ while True:
     elif usercmd == "Who created you?":
         print("\nI was originaly built by pivinx1, with contributions from setapdede and Leap of Azzam.")
     elif usercmd == "What is your version?":
-        print("\nYou're running Sparrow version 0.1.0_rc2.")
+        print("\nYou're running Sparrow version 0.1.1.")
     elif usercmd == "Who are you?":
       print("I am an narrow reactive AI codenamed Sparrow, developed by pivinx1, with contributions from setapdede and Leap of Azzam.")
       print("You can call me Sofia though.")
@@ -137,6 +145,31 @@ while True:
       print("\nSorry ", user, ", but I'm sure I'm not Google's assistant.",sep="")
     elif usercmd == "Hey Siri!":
       print("\nI'm sure you're not Siri-ous.")
+    #Dev tools
+    elif usercmd == "Enter developer mode":
+        passwd = "fuckingpassword"
+        passwd_input = input("Fine. What's the password? If you get it correct, I will let you in.")
+        if passwd_input != passwd:
+            print("Wrong password.")
+        else:
+            print("You got in. Great. Type in \"List developer actions\" to see what you can do in the developer mode.\n")
+            devmode = True
+    elif usercmd == "List developer actions":
+        print("List variables - Lists all available variables.")
+        print("Change dev mode password - Changes your dev mode password (VOLATILE)")
+        print("Disable developer mode - Disables dev mode")
+    elif usercmd == "List variables" and devmode == True:
+
+        print("greetingID = " + str(greetingID))
+        print("user = " + user)
+        print("devmode = " + str(devmode))
+    elif usercmd == "Change dev mode password" and devmode == True:
+        passwd = input("Okay. What is the dev mode password that you want to have?\nRemember that it is volatile, meaning that it will not save when leaving this program.")
+        print("Done.")
+    elif usercmd == "List variables" or usercmd == "Change dev mode password" and devmode == False:
+        print("You can't do this while the dev mode is disabled.")
+    elif usercmd == "Disable developer mode" and devmode == False:
+        print("The developer mode is already disabled.")
     #Invalid
     else:
         tryID = random.randint(0, 4)
