@@ -148,7 +148,7 @@ while True:
     #Dev tools
     elif usercmd == "Enter developer mode":
         passwd = "fuckingpassword"
-        passwd_input = input("Fine. What's the password? If you get it correct, I will let you in.")
+        passwd_input = input("Fine. What's the password? If you get it correct, I will let you in.\n")
         if passwd_input != passwd:
             print("Wrong password.")
         else:
