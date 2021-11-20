@@ -82,6 +82,7 @@ while True:
         print("Progressbar95")
         print("Calculator")
         print("Choices")
+        print("Pythagorean Theorem Calculator")
         usercmd = input("Return to Sparrow\n")
         if usercmd == "Return to Sparrow":
           print("Returned")
@@ -122,6 +123,14 @@ while True:
             print("Invalid operation")
         elif usercmd == "Choices":
             choices()
+        elif usercmd == "Pythagorean Theorem Calculator":
+            # This function is planned to be integrated into the calculator routine.
+            a = int(input("a side of triangle: ")
+            b = int(input("b side of triangle: ")
+            a2 = a ^ 2
+            b2 = b ^ 2
+            c = sqrt(a2 * b2)
+            print("c =", c)
     #Quick Menu
     elif usercmd == "Show the Quick Menu":
         print("\nQuick Menu\n")
