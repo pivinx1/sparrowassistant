@@ -1,3 +1,7 @@
+# ProgressCLI 95 by Setapdede
+# Revision 0.2, created by BurningInfern0.
+# This part of Sparrow is intellectual property of Setapdede.
+
 # Imports
 import random
 from os import system, name
