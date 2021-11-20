@@ -1,4 +1,6 @@
-#From Pivin: leave this file unused until I figure out how to invoke this function, it worked with PB95
+# Sparrow Assistant, Calculator Module
+# This file remains unused because the function invocation seems to be broken.
+
 from math import sqrt
 def calc():
     #Do the math based on type of operation
