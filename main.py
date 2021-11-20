@@ -129,7 +129,7 @@ while True:
             b = int(input("b side of triangle: ")
             a2 = a ^ 2
             b2 = b ^ 2
-            c = sqrt(a2 * b2)
+            c = sqrt(a2 + b2)
             print("c =", c)
     #Quick Menu
     elif usercmd == "Show the Quick Menu":
