@@ -1,5 +1,7 @@
 # Choices
 # Created by Lol Guy
+# Last commit to Choices.py was made on 30 July 2021.
+# Due to long time this app wasn't maintained, it will be dereferenced in Sparrow until a proper commit is made
 
 def choices():
     print("Please note that this isn't anything like the mobile game of the same name.\n Created by Lol Guy for the sparrow assistant by pivinx1\n")
