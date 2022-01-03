@@ -1,6 +1,7 @@
 # Sparrow Assistant, Main Engine
 # Created by Pivin
 
+# Note to self: This thing is supposed to be chopped up into multiple files
 # supposedly start here
 import random
 import datetime
