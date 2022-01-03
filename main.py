@@ -9,7 +9,6 @@ from math import sqrt
 from progressbar import progressbar
 import calc
 import os
-from Choices import choices
 greetingID = random.randint(0, 4)
 ordinal = lambda n: "%d%s"%(n,{1:"st",2:"nd",3:"rd"}.get(n if n<20 else n%10,"th"))
 usercmd = input("\nPlease input how do you want to be called\n")
@@ -82,7 +81,6 @@ while True:
         print("DOS")
         print("Progressbar95")
         print("Calculator")
-        print("Choices")
         print("Pythagorean Theorem Calculator")
         usercmd = input("Return to Sparrow\n")
         if usercmd == "Return to Sparrow":
@@ -122,8 +120,6 @@ while True:
             print(equality)
           else:
             print("Invalid operation")
-        elif usercmd == "Choices":
-            choices()
         elif usercmd == "Pythagorean Theorem Calculator":
             # This function is planned to be integrated into the calculator routine.
             a = int(input("a side of triangle: ")
