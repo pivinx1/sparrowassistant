@@ -4,6 +4,7 @@
 # Go on, break my muppet.
 # This bad boy, or girl, is supposed to be extremely modular. Expect this to be FILLED with module calls.
 import userwrapper as user
+import os
 from modules import notes
 from progresscli.boot import remoteBoot
 
@@ -31,5 +32,10 @@ while True:
             print("No such command")
     elif command == "ProgressCLI 95":
         remoteBoot()
+    elif command == "Clear screen":
+        if os.name("nt"):
+            os.system("cls")
+        elif os.name("posix"):
+            os.system("clear")
     elif command == "Exit":
         exit()
