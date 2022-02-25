@@ -3,7 +3,10 @@ import os
 def takeNote(text):
     # Open the note file (or make a new one); then append data passed through the text variable to the note.
     note = open("note.snf", "a")
-    note.write(text + "\n")
+    if(os.path.getsize("note.snf") > 0):
+        note.write("\n" + text)
+    else:
+        note.write(text)
     note.close()
 def rmNote():
     if os.path.exists("note.snf"):

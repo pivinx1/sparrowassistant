@@ -31,3 +31,5 @@ while True:
             print("No such command")
     elif command == "ProgressCLI 95":
         remoteBoot()
+    elif command == "Exit":
+        exit()
