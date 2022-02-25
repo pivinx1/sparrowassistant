@@ -14,7 +14,7 @@ while True:
     # Off to making a huge disaster of an if-elif chain. Now split into menus.
     command = input(">")
     if command == "Menu":
-        print("Menu\nRetype the menu entry name to the prompt to run the command.\n1. Notepad\n2. ProgressCLI 95")
+        print("Menu\nRetype the menu entry name to the prompt to run the command.\n1. Notepad\n2. ProgressCLI 95\n3. Exit")
     elif command == "Notepad":
         print("Notepad\nRetype menu entry name to run the command.\n1. Add new line to note\n2. Delete note\n3. Read note\n4. Exit")
         noteCommand = input(">")
